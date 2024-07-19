@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*
+* Optional: Makes the sample page fill the window.
+*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+#map {
+    height: 100%;
+}
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 5;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.checkbox-toggle {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox-toggle input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox-toggle .checkbox__checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: #eee;
+    transition: background-color 0.25s ease;
+    border-radius: 4px;
+    transform: translateY(-50%);
+    border-radius: 4px;
+}
+.checkbox-toggle .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid #FFF;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.checkbox-toggle input:checked ~ .checkbox__checkmark {
+    background-color: #3261f2;
+}
+.checkbox-toggle input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}
